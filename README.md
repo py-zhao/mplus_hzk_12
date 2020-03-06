@@ -1,4 +1,4 @@
-# Gen_BatMap_Font
+# mplus_hzk_12
 using fontforge generate pixel font from bdf or hzk
 python script for fontforge 
 
