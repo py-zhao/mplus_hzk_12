@@ -23,9 +23,6 @@ python script for fontforge
     
 
 
-
-
-
 -> 其实我就是想弄一个免费而且好看点的中文像素字体. 
 
 -> 奈何网上找到的像素字体大部分都有版权.
@@ -40,7 +37,6 @@ python script for fontforge
 
 -> 如果hzk 真的没有版权, mplus_hzk_12 字体也是没有任何版权所有人都能随意使用的自由字体.
 
-
-
+![Image text](https://github.com/Luckeee/mplus_hzk_12/blob/master/yulan.PNG)
 
 
