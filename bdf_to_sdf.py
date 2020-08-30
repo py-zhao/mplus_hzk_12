@@ -8,8 +8,10 @@ def OpenBDF(path):
 
 def Start():
 
-    bdf_font = OpenBDF("C:/Users/op/Downloads/HZK/mplus_jf12r.bdf")
-    sdf_font = fontforge.open("C:/Users/op/Downloads/HZK/mplus_jf12r.sfd")
+    bdf_font = OpenBDF("C:/Users/lo/Downloads/HZK/mplus_jf12r.bdf")
+    sdf_font = fontforge.font()
+    sdf_font.encoding = "jis208"
+    sdf_font.ascent = 1200
 
     for bdf_glyph in bdf_font.glyphs:
         # bdf_glyph = bdf_font[12321]
@@ -39,9 +41,10 @@ def Start():
 
         pen = None
         glyph.removeOverlap()
-
+        
         # break
     
-    sdf_font.save()
+    # sdf_font.autoWidth()
+    sdf_font.save("mplus_jf12r.sfd")
 
 Start()

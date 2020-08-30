@@ -3,6 +3,11 @@ import binascii
 
 KEYS = [0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01]
 
+sdf_path = "HZK12.sfd"
+hzk_path = "C:/Users/lo/Downloads/HZK/HZK12"
+gb2312_path = "C:/Users/lo/Downloads/HZK/gb2312.txt"
+
+
 def Draw(font, ch, rect_list):
 
     gb2312 = ch.encode('gb2312')
@@ -59,7 +64,7 @@ def draw_glyph(ch):
     offset = (94 * (area-1) + (index-1)) * 24
     font_rect = None
     # 读取HZK16汉字库文件
-    with open("C:/Users/op/Downloads/HZK/HZK12", "rb") as f:
+    with open(hzk_path, "rb") as f:
         # 找到目标汉字的偏移位置
         f.seek(offset)
         # 从该字模数据中读取24字节数据
@@ -80,7 +85,7 @@ def draw_glyph(ch):
     return rect_list
 
 def OpenGBK():
-    f = open("C:/Users/op/Downloads/HZK/gb2312.txt", 'r', encoding='UTF-8')
+    f = open(gb2312_path, 'r', encoding='UTF-8')
     line = f.readline()
 
     for index, ch in enumerate(line):
@@ -93,15 +98,13 @@ def OpenGBK():
     f.close()
 
 
-sdf_path = "C:/Users/op/Downloads/HZK/HZK12.sfd"
-
-
 def Start():
 
-    font = fontforge.open(sdf_path)  # Open a font
+    font = fontforge.font()  # Open a font
     font.encoding = "gb2312"
-    
-    f = open("C:/Users/op/Downloads/HZK/gb2312.txt", 'r', encoding='UTF-8')
+    font.ascent = 1200
+
+    f = open(gb2312_path, 'r', encoding='UTF-8')
     
     line = f.readline()
 
@@ -114,11 +117,8 @@ def Start():
             Draw(font, ch, rect)
         line = f.readline()
 
-    font.save()
+    # font.autoWidth()
+    font.save(sdf_path)
     f.close()
 
-# OpenGBK():
 Start()
-
-
-#ffpython C:\Users\op\Downloads\HZK\font.py
