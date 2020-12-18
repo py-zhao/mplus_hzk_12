@@ -1,14 +1,9 @@
-# mplus_hzk_12
-using fontforge generate pixel font from bdf or hzk
-python script for fontforge 
-
 #bdf_to_sdf.py
-  convert bdf bitmap font to fontforge sdf file.
-  refrence bdflib (https://pypi.org/project/bdflib/1.1.1/)
-  
+  把bdf子模生成sdf文件
+  使用库bdflib (https://pypi.org/project/bdflib/1.1.1/)
   
 #hzk_to_sdf.py
-  convert hzk to fontforge sdf file.
+  把hzk子模生成sdf文件
 
 #hzk12 hzk16
     覆盖gb2312汉字部分的点阵库
@@ -20,8 +15,6 @@ python script for fontforge
 
 #mplus_jf12r.sfd
     生成的 sdf fontforge 工程文件.
-    
-
 
 -> 其实我就是想弄一个免费而且好看点的中文像素字体. 
 
