@@ -29,7 +29,6 @@
 -> 所以就有了这个 用mplus 英文 + 日文 作为基础, hzk12 作为补充的 mplus_hzk_12 字体 ╰(*°▽°*)╯
 
 -> 如果hzk 真的没有版权, mplus_hzk_12 字体也是没有任何版权所有人都能随意使用的自由字体.
-
-![Image text](https://github.com/Luckeee/mplus_hzk_12/blob/master/yulan.PNG)
+![Image text](https://github.com/Luckeee/mplus_hzk_12/blob/master/缝合.PNG)
 
 
